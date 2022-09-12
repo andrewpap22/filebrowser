@@ -150,9 +150,9 @@ func importConf(db *storm.DB, path string, sto *storage.Storage) error {
 	case "proxy":
 		auther = &auth.ProxyAuth{Header: cfg.Auth.Header}
 		s.AuthMethod = auth.MethodProxyAuth
-	case "hook":
-		auther = &auth.HookAuth{Command: cfg.Auth.Command}
-		s.AuthMethod = auth.MethodHookAuth
+	// case "hook":
+	// 	auther = &auth.HookAuth{Command: cfg.Auth.Command}
+	// 	s.AuthMethod = auth.MethodHookAuth
 	case "none":
 		auther = &auth.NoAuth{}
 		s.AuthMethod = auth.MethodNoAuth
